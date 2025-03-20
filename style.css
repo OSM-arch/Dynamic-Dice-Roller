@@ -1,0 +1,51 @@
+main 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px red;
+    padding: 20px 30px;
+    text-align: center;
+    font-family: verdana;
+}
+h1
+{
+    font-size: 4vw;
+}
+#DiceImages img
+{
+    width: 4vw;
+}
+#btnRollDice
+{
+    display: block;
+    background-color: #920303;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px auto;
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
+    transition: width 1s;
+    animation: btnAnimation 2s infinite;
+}
+#btnRollDice:hover {
+    width: 50%;
+    background-color: #b80404;
+    font-weight: bold;
+}
+@keyframes btnAnimation
+{
+    0% {
+        box-shadow: 0 0 5px red;
+    }
+    100% {
+        box-shadow: 0 0 10px red;
+    }
+}
