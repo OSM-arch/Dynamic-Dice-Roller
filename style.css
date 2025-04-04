@@ -1,51 +1,102 @@
-main 
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    border: 2px solid black;
-    border-radius: 5px;
-    box-shadow: 0 0 10px red;
-    padding: 20px 30px;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+div {
+    width: 100%;
+    max-width: 800px;
+}
+
+main {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 1rem;
+}
+
+h1 {
+    color: #2c3e50;
     text-align: center;
-    font-family: verdana;
+    margin-bottom: 1.5rem;
 }
-h1
-{
-    font-size: 4vw;
-}
-#DiceImages img
-{
-    width: 4vw;
-}
-#btnRollDice
-{
+
+label {
     display: block;
-    background-color: #920303;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #34495e;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="button"] {
+    background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin: 10px auto;
-    width: 30%;
-    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
     cursor: pointer;
-    transition: width 1s;
-    animation: btnAnimation 2s infinite;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.3s;
 }
-#btnRollDice:hover {
-    width: 50%;
-    background-color: #b80404;
-    font-weight: bold;
+
+input[type="button"]:hover {
+    background-color: #2980b9;
 }
-@keyframes btnAnimation
-{
-    0% {
-        box-shadow: 0 0 5px red;
+
+#pDice {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#DiceImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.dice {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 600px) {
+    input[type="number"] {
+        width: auto;
     }
-    100% {
-        box-shadow: 0 0 10px red;
+    
+    input[type="button"] {
+        width: auto;
+        display: block;
+        margin: 0 auto;
     }
 }
